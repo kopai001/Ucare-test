@@ -1,0 +1,46 @@
+
+
+<ion-view view-title="นพ.เจม" style="background-color:#fdfdfd;">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-reply" ui-sref="tab.allchat()" ></button>
+  </ion-nav-buttons>
+  <ion-nav-bar >
+
+  </ion-nav-bar>
+
+    <div class="list card " id="cameraTabDefaultPage-card22" style="margin-left: 0px;margin-right: 0px;margin-top: 45px;">
+      <ion-item class="item-avatar item-icon-right balanced" id="cameraTabDefaultPage-list-item10">
+        <img src="img/doctorJame.jpg">
+        <h2balanced  >นพ.เจม บอนด์และทีม
+          <p style="font-size: 0.7em;">โรงพยาบาลสงขลานครินทร์</p>
+          <p style="font-size: 0.7em;">เวลาตอบกลับ 18.00น. - 22.00น.</p>
+          <i class="icon ion-android-add-circle"></i>
+        </h2balanced>
+      </ion-item>
+    </div>
+
+
+ <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<style>div.intro{text-align: right;}</style>
+
+  <ion-content class="content-stable has-header " style="margin-left: 10px;margin-right: 10px;">
+     <div class="spacer" style="height: 90px;"></div>
+     <div   ng-repeat="chat in chats">
+        <div  ng-class="{'intro':chat.user=='Guest'}">
+          <img>
+          <p style="color: grey">{{chat.user}}</p>
+          <span class="chatmessage span" >{{chat.message}}</span>
+        </div>
+    </div> 
+    </ion-content>
+
+    <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+          <label class="item-input-wrapper">
+            <input type="text" placeholder="Write something" ng-model="chat.message">
+          </label>
+          <button style="background:#7ec8ba;" class="button button-positive ion ion-paper-airplane" ng-click="sendChat(chat)"></button>
+    </ion-footer-bar>
+    
+</ion-view>
